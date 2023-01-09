@@ -1,4 +1,4 @@
-import { GearIcon } from '@primer/octicons-react'
+import { BugIcon } from '@primer/octicons-react'
 import { useEffect, useState } from 'preact/hooks'
 import { memo, useCallback } from 'react'
 import ReactMarkdown from 'react-markdown'
@@ -8,6 +8,7 @@ import { captureEvent } from '../analytics'
 import { Answer } from '../messaging'
 import ChatGPTFeedback from './ChatGPTFeedback'
 import { isBraveBrowser, shouldShowTriggerModeTip } from './utils.js'
+import logo from '../header-logo.png'
 
 interface Props {
   question: string
@@ -74,9 +75,9 @@ function ChatGPTQuery(props: Props) {
     return (
       <div id="answer" className="markdown-body gpt-inner" dir="auto">
         <div className="gpt-header">
-          <span className="font-bold">THREELabs - ChatGPT</span>
+          <img src={logo}/>
           <span className="cursor-pointer leading-[0]" onClick={openOptionsPage}>
-            <GearIcon size={14} />
+            <BugIcon size={14} />
           </span>
           <ChatGPTFeedback
             messageId={answer.messageId}
