@@ -137,7 +137,7 @@ function ChatGPTQuery(props: Props) {
     )
   }
 
-  return <p className="gpt-loading gpt-inner">Waiting for ChatGPT response...</p>
+  return <p className="gpt-loading gpt-inner">Waiting for THREELabs to find a response...</p>
 }
 
 export default memo(ChatGPTQuery)
